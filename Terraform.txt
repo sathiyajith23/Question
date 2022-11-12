@@ -1,0 +1,599 @@
+What is Terraform?
+	- Terraform is a tool to build an infrastructure safely and efficiently. Terraform can manage leading and popular service providers 
+	  as well as custom in-house solutions.
+
+Beginner Level: Interview Questions On Terraform
+
+1: What do you mean by Terraform?
+	- Terraform is open-source communication as a system software tool created by HashiCorp. It is an instrument for building, altering, and 	  versioning transportation safely and professionally. Terraform can direct existing and accepted service providers as well as convention in-	  house solutions.
+
+2: What are the reasons for choosing Terraform for DevOps?
+	Below are the reasons for choosing Terraform for DevOps:
+	- It can do complete orchestration and not just configuration management (like Ansible and Puppet).
+	- Has amazing support of almost all the popular cloud providers like AWS, Azure, GCP, DigitalOcean etc.
+	- Easily manages the configuration of an immutable (dynamic) infrastructure.
+	- Provide immutable infrastructure where configuration changes smoothly.
+	- Works on HCL (HashiCorp configuration language), which is very easy to learn and understand.
+	- Easily portable from one provider to another.
+	- Easy Installation.
+3: Define Terraform init?
+	- Terraform initialises the code with the command terraform init. This command is used to set up the working directory for Terraform 	  configuration files. It is safe to run this command multiple times.
+	  You can use the init command for:
+
+	- Installing Plugins
+	- Installation of a Child Module
+	- Initialization of the backend
+
+4: Name some major competitors of Terraform?
+	Some of them are:
+
+	- Packer
+	- Cloud Foundry
+	- Ansible
+	- Kubernetes
+
+5: Define Terraform provider?
+	- Terraform is a tool for managing and informing infrastructure resources such as physical machines, virtual machines (VMs), network switches, 	  containers, and more. A provider is responsible for API interactions that are thoughtful and reveal resources. Terraform is compatible with a 	  wide range of cloud providers.
+
+6: How does Terraform work?
+	- Terraform creates an implementation plan, defines what it will do to achieve the desired state, and then executes it to build the 	  infrastructure described. Terraform is capable of determining what changed and generating incremental execution plans that are practical as 	  the configuration changes.
+
+7: Name some major features of Terraform?
+	Some of them are:
+
+	- Execution Plan
+	- Change Automation
+	- Resource Graph
+	- Infrastructure as code
+
+8: Define IAC?
+	- IaC is a short form to the term “Infrastructure as Code”. IaC refers to a scheme whereby developers can run and provision the computer data 	  center’s mechanically instead of getting into a physical process. Terraform IAC, for example, is a case tool of IAC.
+
+9: How to check the installed version of Terraform?
+	- We can use terraform -version of the command to identify the version which we are running.
+
+10: Describe the working of Terraform core?
+	- The terraform core examines configuration monitoring and generates configuration-based analysis and evaluation. It keeps track of and compares 	  versions (current and previous) before displaying the results via the terminal.
+	  Terraform core mainly takes two inputs:
+	- Terraform Configuration – It keeps track of the infrastructure detail
+	- Terraform state – It keeps track of the infrastructure status.
+
+11:  What are the key features of Terraform?
+	Following are the key features of Terraform:
+
+	- Infrastructure as Code: Terraform’s high-level configuration language is used to define your infrastructure in 
+	  human-readable declarative configuration files.
+	- You may now create an editable, shareable, and reusable blueprint.
+	- Terraform generates an execution plan that specifies what it will do and asks for your approval before making any 
+	  infrastructure alterations. You can assess the modifications before Terraform creates, updates, or destroys infrastructure.
+	- Terraform creates a resource graph while simultaneously developing or altering non-dependent resources. Terraform can now build resources as 	  quickly as possible while also giving you more information about your infrastructure.
+	- Terraform’s the automation of change allows you to apply complex changesets to your infrastructure with little to no human interaction. 
+
+Intermediate Level: Terraform Interview Questions and Answers for Experienced
+
+13: What are the most useful Terraform commands?
+	Common commands:
+
+	- terraform init: Prepare your working directory for other commands
+	- terraform plan: Show changes required by the current configuration
+	- terraform apply: Create or update infrastructure
+	- terraform destroy: Destroy previously-created infrastructure
+
+14: How does Terraform help in discovering plugins?
+	- Terraform interprets configuration files in the operational directory with the authority “Terraform init.” Then, Terraform determines the 	  necessary plugins and searches for installed plugins in various locations. Terraform may also download additional plugins at times. Then it 	  decides which plugin versions to use and creates a security device file to ensure that Terraform uses the same plugin versions.
+
+15: Can I add policies to the open-source or pro version of Terraform enterprise?
+	- Terraform Policies cannot be added to Terraform Enterprise’s open-source description. The same is true for the Enterprise Pro edition. 	  Terraform Enterprise’s best version could only contact the watch policies.
+
+16: Define Modules in Terraform?
+	- A module in Terraform is a container for multiple resources that are used in tandem. Every Terraform that includes resources mentioned in.tf 	  files requires the root module.
+
+17: What are the ways to lock Terraform module versions?
+	- You can use the terraform module registry as a source and specify the attribute’version’ in the module in a terraform configuration file. If 	  you are using the GitHub repository as a source, you must use ‘? ref’ to specify the branch, version, and query string.
+
+18: What do you mean by Terraform cloud?
+	- Terraform Cloud is an application that enables teams to use Terraform collaboratively. It manages Terraform runs in a consistent and reliable 	  	  environment, and includes features such as easy access to shared state and secret data, access controls for approving infrastructure changes, a private 	  registry for sharing Terraform modules, detailed policy controls for governing the contents of Terraform configurations, and more.
+
+19: Define null resource in Terraform?
+	- The null resource follows the standard resource lifecycle but takes no additional actions. The trigger argument allows for the specification of a subjective 	  set of values that, if misrepresented, will cause the reserve to be replaced.
+
+	-  The null resource’s primary application is as a do-nothing container for arbitrary actions performed by a provisioner.
+
+20: Can Terraform be used for on-prem infrastructure?
+	- Yes, Terraform can be used to build on-premises infrastructure. There are numerous providers available. You can select whichever one best suits your needs. 	  Many people create client Terraform providers for themselves; all that is required is an API.
+
+21 : What does the following command do?
+	- Terraform -version – to check the installed version of terraform
+	- Terraform fmt– it is used to rewrite configuration files in canonical styles and format
+	- Terraform providers – it gives information of providers working in the current configuration.
+
+22: List all the Terraform-supported versions
+	- GitHub.com
+	- GitLab.com
+	- GitHub Enterprise
+	- GitLab CE and EE
+	- Bitbucket Cloud and Server
+	- Azure DevOps Server and Services
+
+23: Explain the command terraform validate in the context of Terraform.
+	- The terraform validate command examines the configuration files in a directory, concentrating solely on the configuration and ignoring any 
+	  external services such as remote state, provider APIs, and so on. Validate inspects a configuration to determine whether it is syntactically correct and 	  internally consistent, regardless of variables or current state. As a result, it’s best for general reusable module verification, such as confirming the 	  validity of attribute names and value types. This command can be executed automatically, such as a post-save check in a text editor or a test step in a 	  continuous integration system for a reusable module.
+	- Syntax: terraform validate [options]
+
+24: Mention some of the version control tools supported by Terraform.
+	Version control tools supported by Terraform are:
+	- GitHub
+	- GitLab CE
+	- GitLab EE
+	- Bucket Cloud
+
+Terraform Interview Questions and Answers for Experienced Scenario Based
+
+25: How would you recover from a failed apply in Terraform?
+	- You can save your configuration in version control and commit it before making any changes, and then use the features of your version control system to 	  revert to an earlier configuration if necessary. You must always recommit the previous version code in order for it to be the new version in the version 	  control system.
+
+26: What do you mean by Terragrunt, list some of its use cases?
+	- Terragrunt is a lightweight wrapper that adds tools for maintaining DRY configurations, working with multiple Terraform modules, and managing remote states.
+	Use cases:
+	- Keep your Terraform code DRY
+	- Maintain a DRY remote state configuration.
+	- Keep your CLI flags DRY
+	- Run Terraform commands on multiple modules at the same time.
+	- Use multiple AWS accounts.
+
+27: What steps should be followed for making an object of one module to be available for the other module at a high level?
+	The following are the steps to take in order to make an object from one module available to the other module at a high level:
+
+	- First, in a resource configuration, an output variable must be defined. The scope of local and to a module is not declared until you declare resource 	  configuration details.
+	- You must now declare the output variable of module A so that it can be used in the configurations of other modules. You should create a brand new and current 	  key name, and the value should be kept equal to the module A output variable.
+	- You must now create a file variable.tf for module B. Create an input variable inside this file with the same name as the key you defined in module B. This 	  variable in a module enables the resource’s dynamic configuration. Rep the process to make this variable available to another module as well. This is due to 	  the fact that the variable established here has a scope limited to module B.
+
+28: What is State File Locking?
+	- State file locking is a Terraform mechanism that prevents operations on a specific state file from being performed by multiple users at the same time. Once 	  the lock from one user is released, any other user who has taken a lock on that state file can operate on it. This aids in the prevention of state file 	  corruption. The acquiring of a lock on a state file in the backend is a backend operation. If acquiring a lock on the state file takes longer than expected, 	  you will receive a status message as an output.
+
+29: What is a Remote Backend in Terraform?
+	- Terraform remote backend is used to store Terraform’s state and can also run operations in Terraform Cloud. Multiple terraform commands such as init, plan, 	  apply, destroy (terraform version >= v0.11.12), get, output, providers, state (sub-commands: list, mv, pull, push, rm, show), taint, untaint, validate, and 	  many more are available via remote backend. It is compatible with a single remote Terraform cloud workspace or multiple workspaces. You can use terraform 	  cloud’s run environment to run remote operations such as terraform plan or terraform apply.
+
+30: What is a Tainted Resource?
+	- Tainted resources are those that must be destroyed and recreated upon the next apply command. Nothing changes on infrastructure when you mark a resource as 	  tainted, but the state file is updated with this information (destroy and create). After marking a resource as tainted, Terraform plan out will show that the 	  resource will be destroyed and recreated, and the changes will be implemented when the next apply occurs.
+
+31: Are callbacks possible with Terraform on Azure?
+	- Terraform uses Azure Event Hub to perform Azure callbacks. It aids in achieving functionality such as sending a callback to the system and other events. To 	  make the process easier, Terraform AzureRM already includes this functionality.
+
+32: How to prevent Error Duplicate Resource
+	It can be done in three ways depending on the situation and the requirement
+	1) By deleting the resource, Terraform code will no longer manage it.
+	2) By removing resources from APIs
+	3) Importing action will also aid in resource elimination.
+
+33: Explain the workflow of the core terraform.
+	Terraform’s core workflow has three steps:
+	- Write – Create infrastructure in the form of code.
+	- Plan – Plan ahead of time to see how the changes will look before they are implemented.
+	- Apply – Create a repeatable infrastructure.
+
+37: What are the most useful Terraform commands ?
+	Here are some useful Terraform Commands
+	- fmt
+	- init
+	- validate
+	- plan
+	- apply
+	- destroy
+	- output
+	- show
+	- state
+	- version
+38: Are callbacks possible with Terraform on Azure ?
+	- Yes. This is possible with Azure Event Hubs.
+
+39: What is Terraform Directory?
+	- Terraform Directory, which Terraform uses to manage cached provider plugins and modules, as well as to record which workspace is currently active and the 	  last known backend configuration in case state needs to be migrated on the next run.
+
+40: Is history the same as it is on the web while using TFS API to provide resources ?
+	- Yes, the narration is similar to that found on the web because UI uses API as its foundation. Everything on the UI is available via other methods and the API.
+
+41: What is a Private Module Registry?
+	- Using the private module registry, Terraform Cloud users can create and confidentially share infrastructure modules within an organisation. The private 	  module registry in Terraform Enterprise allows you to share modules within or across organisations.
+
+42: Does Terraform support multi-provider deployments?
+	- Terraform is a powerful tool in multi-provider deployments because it is not tied to a specific infrastructure or cloud provider. You can manage all 	  	  resources with the same set of configuration files, sharing variables and defining dependencies across providers.
+
+
+43: How is duplicate resource error ignored during terraform apply ?
+	You can:
+
+	- To stop managing those resources, remove them from your Terraform code.
+	- Remove the resources from the API (cloud provider) and recreate them using Terraform.
+	- Terraform those resources and remove the terraform code that is attempting to recreate them.
+	- Use terraform apply —target=xxx to apply only the resources you require.
+
+44: What are Provisioners in Terraform?
+	- Provisioners are used to execute scripts on a local or remote machine as part of resource creation or destruction. Provisioners can be used to bootstrap a 	  resource, cleanup before destroy, run configuration management, etc.
+
+45: What are some of the built-in provisioners available in Terraform?
+	Some of the built-in provisioners available in Terraform are:
+	- abspath.
+	- dirname.
+	- pathexpand.
+	- basename.
+	- file.
+	- fileexists.
+	- fileset.
+	- filebase64.
+
+46: Tell us about some notable Terraform applications.
+	The applications of Terraform are pretty broad due to its facility of extending its abilities for resource manipulation. Some of the unique applications are:
+	- Software demos development
+	- Resource schedulers
+	- Multi-cloud deployment
+	- Disposable environment creations
+	- Multi-tier applications development
+	- Self-service clusters
+	- Setup of Heroku App
+
+47: What are the components of Terraform architecture?
+	The Terraform architecture includes the following features:
+	- Sub-graphs
+	- Expression Evaluation
+	- Vertex Evaluation
+	- Graph Walk
+	- Graph Builder
+	- State Manager
+	- Configuration Loader
+	- CLI (Command Line interface)
+	- Backend
+
+48: Define Resource Graph in Terraform.
+	- A resource graph is a graphical representation of the available resources. It enables the modification and creation of independent resources at the same 	  time. Terraform creates a plan for the graph’s configuration in order to generate plans and refresh the state. It efficiently and effectively creates 	  structure to help us understand the disadvantages.
+
+49: Can you provide a few examples where we can use for Sentinel policies?
+	Sentinels are an effective way to implement a wide range of policies in Terraform. Here are a couple of examples:
+	- Enforce explicit resource ownership.
+	- Limit the roles that the cloud provider can play.
+	- Examine the audit trail for Terraform Cloud operations.
+	- Only certain resources, providers, or data sources may be prohibited.
+	- Make resource tagging mandatory.
+	- In the Private Module Registry, you can limit how modules are used.
+
+50: What are the various levels of Sentinel enforcement?
+	Sentinel has three levels of enforcement: advisory, soft mandatory, and hard mandatory.
+
+	- Advisory – Logged in but permitted to pass. When a user initiates a plan that violates the policy, an advisory is issued.
+	- Soft Mandatory – Unless an override is specified, the policy must be followed. Overrides are only available to administrators.
+	- Hard Mandatory – The policy must be implemented regardless. Unless and until this policy is removed, it cannot be overridden. 
+	  Terraform’s default enforcement level is this.
+
+51: How to Store Sensitive Data in Terraform?
+	- To communicate with your cloud provider’s API, Terraform requires credentials. However, these credentials are frequently saved in plaintext on your desktop. 	  Every day, GitHub is exposed to thousands of API and cryptographic keys. As a result, your API keys should never be directly stored in Terraform code. To 	  	  store passwords, TLS certificates, SSH keys, and anything else that shouldn’t be stored in plain text, use encrypted storage.
+
+52: What is Terraform Core? Tell us some primary responsibilities of it
+	- Terraform Core is a binary written in the Go programming language and statically compiled.The compiled binary provides Terraform users with an entry point. 	  The primary responsibilities are as follows:
+	- Infrastructure’s code functionalities include module and configuration file reading and interpolation.
+	- Building a Resource Graph
+	- RPC-based plugin communication
+	- Plan implementation
+	- Resource state management
+
+54: How will you control and handle rollbacks when something goes wrong?
+	- We will recommit the previous version of the code to my VCS as the new and current version. A terraform run will be triggered, which will be in charge of 	  running the old code. Remember that terraform is more declarative. Check that the old code contains everything that was specified in the code for rollback.
+	- Ensure that it is not destroyed when the old code is run due to a lack of these. If the state file becomes corrupted as a result of a recent Terraform run, I 	  will use Terraform Enterprise’s State Rollback feature to roll back to the most recent good state. Because every state change is versioned, this could be 	  done.
+
+55: How can you define dependencies in Terraform?
+	- You can use depends_on to declare the dependency explicitly. You can also specify multiple resources in the depends on argument, and Terraform will create 	  the target resource after all of them have been created.
+
+56: What is the external data block in Terraform?
+	- The external data source allows an external programme to act as a data source by exposing arbitrary data for use elsewhere in the Terraform configuration by 	  implementing a specific protocol (defined below).
+
+57: What happens when multiple engineers start deploying infrastructure using the same state file?
+	- Terraform has a critical feature known as “state locking.” This feature ensures that no changes to the state file are made during a run, preventing the state 	  file from becoming corrupt. It is important to note that the state locking feature is not supported by all Terraform Backends. If this feature is required, 	  	  you should select the appropriate backend.
+
+58: Which value of the TF_LOG variable provides the MOST verbose logging?
+	- TRACE is the most verbose option, and it is the default if TF_LOG is not set to a log level name. When logging is enabled, you can set TF_LOG_PATH to force 	  the log to always be appended to a specific file.
+
+59: Which command can be used to preview the terraform execution plan?
+	- The terraform plan command generates an execution plan, which allows you to preview the changes that Terraform intends to make to your infrastructure. 
+	  When Terraform generates a plan by default, it:
+
+	- Reads the current state of any existing remote objects to ensure the Terraform state is current.
+	- The current configuration is compared to the previous state, and any differences are noted.
+	- Proposes a set of change actions that, if executed, should cause the remote objects to match the configuration.
+
+60: Which command can be used to reconcile the Terraform state with the actual real-world infrastructure?
+	- Terraform aids in the detection and management of drift. The state file stores information about the real-world state of Terraform-managed infrastructure. 
+	  The command terraform refresh refreshes this state file, reconciling what Terraform believes is running and its configuration with what is actually running 	  and configured.
+
+61: What is the benefit of Terraform State? What is the benefit of using modules in terraform?
+	- Terraform state is primarily used to store bindings between remote system items and resource instances specified in your configuration. When Terraform 	  generates a remote object in response to a configuration change, it saves the remote object’s identification to a specific resource instance and may update 	  or remove that object in response to future configuration changes.
+
+	- We can save time and avoid costly errors by reusing configuration created by you, other members of your team, or other Terraform experts who have published 	  modules for you to use.
+
+Some other important terraform commands for technical terraform interview Questions
+
+	- terraform init: In order to prepare the working directory for use with Terraform, the terraform init command performs Backend Initialization, Child Module 	  Installation, and Plugin Installation.
+	- terraform apply: The terraform apply command executes the actions proposed in a Terraform plan
+	- terraform apply –auto-approve: Skips interactive approval of plan before applying.
+	- terraform destroy: The terraform destroy command is a convenient way to destroy all remote objects managed by a particular Terraform configuration.
+	- terraform fmt: The terraform fmt command is used to rewrite Terraform configuration files to a canonical format and style
+	- terraform show: The terraform show command is used to provide human-readable output from a state or plan file
+
+Top Terraform Interview Questions and Answers
+
+Here are some basic level terraform interview questions.
+
+1. What do you understand by Terraform in AWS?
+	- Terraform is a part of the AWS DevOps Competency and also an AWS Partner Network (APN) advanced technology partner. 
+	  It is similar to AWS Cloud Formation in the sense that it is also an “infrastructure as code” tool that allows you 
+	  to create, update, and version your AWS infrastructure.
+
+2. What are the key features of Terraform?
+	 Terraform helps you manage all of your infrastructures as code and construct it as and when needed. Here are its key main features:
+	- A console that allows users to observe functions 
+	- The ability to translate HCL code into JSON format
+	- A configuration language that supports interpolation 
+	- A module count that keeps track of the number of modules applied to the infrastructure.
+
+3. Define IAC?
+	- IAC or Infrastructure as Code allows you to build, change, and manage your infrastructure through coding instead of manual processes. 
+	  The configuration files are created according to your infrastructure specifications and these configurations can be edited and distributed securely within an 	  organization.
+
+4. What are the most useful Terraform commands?
+	Some of the most useful Terraform commands are:
+	- terraform init - initializes the current directory
+	- terraform refresh - refreshes the state file
+	- terraform output - views Terraform outputs
+	- terraform apply - applies the Terraform code and builds stuff
+	- terraform destroy - destroys what has been built by Terraform
+	- terraform graph - creates a DOT-formatted graph
+	- terraform plan - a dry run to see what Terraform will do
+
+5. Are callbacks possible with Terraform on Azure?
+	- By using the Azure Event Hubs, callbacks are probable on Azure. Terraform’s Azure supplier provides effortless functionality to users. 
+	  Microsoft Azure Cloud Shell provides an already installed Terraform occurrence.
+
+6. What is Terraform init?
+	- Terraform init is a control to initialize an operational index that contains Terraform pattern files. This control can be looped multiple times. 
+	  It is the first command that should be run after writing the new Terraform design.
+
+7. What is Terraform D?
+	- Terraform D is a plugin used on most in-service systems and Windows. Terraform init by default searches next directories for plugins.
+
+8. Is history the same as it is on the web while using TFS API to provide resources?
+	- Yes, the narration is similar to on the web because UI keeps API as the base. 
+	  The whole thing that is on the UI is availed during other methods and the API.
+
+9. Why is Terraform used for DevOps?
+	- Terraform uses a JSON-like configuration language called the HashiCorp Configuration Language (HCL). 
+	  HCL has a very simple syntax that makes it easy for DevOps teams to define and enforce infrastructure configurations 
+	  across multiple clouds and on-premises data centers.
+10. Define null resource in Terraform.
+	- null_resource implements standard resource library, but no further action is taken. 
+	  The triggers argument allows an arbitrary set of values that will cause the replacement of resources when changed.
+
+11. What do you mean by Terraform cloud?
+	- Terraform Cloud is a platform that enables teams to use Terraform together, either on-demand or in response to various events. 
+	  It is deeply integrated with Terraform's workflows and data, unlike a general-purpose continuous integration system. 
+	  It includes easy access to shared state and secret data, detailed policy controls for updating infrastructure and governing 
+	  the contents of Terraform, a private registry for sharing Terraform modules, and lots more.
+
+12. Explain Oracle Cloud Infrastructure.
+	- Oracle cloud offered by Oracle Corporation is a cloud computing service providing storage, servers, applications, services, 
+	  and network through a global network of managed data centers by Oracle Corporation. These services are provisioned on-demand 
+	  over the Internet by the company.
+
+13. What do you understand by terraform backend?
+	Each Terraform configuration can specify a backend, which defines two main things:
+	Where operations are performed 
+	Where the state is stored (Terraform keeps track of all the resources created in a state file)
+
+14. What are the version controls supported by Terraform besides GitHub?
+	- The version controls supported GitLab EE, GitLab CE, and Bucket cloud.
+
+15. Name some major competitors of Terraform?
+	-Some of the top competitors and alternatives to Terraform are Azure Management Tools, Morpheus, CloudHealth, Turbonomic, and CloudBolt.
+
+Intermediate Terraform Interview Questions
+
+16. Explain the uses of Terraform CLI and list some basic CLI commands?
+	- The Terraform Command-Line Interface (CLI) is used to manage infrastructure and interact with Terraform state, configuration files, providers, etc.
+
+	Here are some basic CLI commands:
+	- terraform init - prepares your working directory for other commands
+	- terraform destroy - destroys the previously-created infrastructure
+	- terraform validate - check whether the configuration is valid
+	- terraform apply - creates or updates the infrastructure
+	- terraform plan - shows changes needed by the current configuration
+
+17. What are modules in Terraform?
+	- A jug for numerous resources that are used jointly is known as a module in Terraform. 
+	  The root module includes resources mentioned in the .tf files and is required for every Terraform.
+
+18. What is a Private Module Registry?
+	- A Private Module Registry is a feature from Terraform Cloud that allows you to share Terraform modules across the organization.
+	  You can enforce rules or “sentinel policies” on the registry that specify how members of your organization can use the modules.
+
+19. Is Terraform usable for an on-prem infrastructure?
+	- Yes, Terraform can be used for on-prem infrastructure. As there are a lot of obtainable providers, 
+	  we can decide which suits us the best. All that we need is an API.
+20. Does Terraform support multi-provider deployments?
+	- Yes, multi-provider deployments are supported by Terraform, which includes on-prem like Openstack, 
+	 VMware, and we can manage SDN even using Terram too.
+
+
+21. How is duplicate resource error ignored during terraform apply?
+	We can try the following options:
+	- Delete those resources from the cloud provider(API) and recreate them using Terraform
+	- Delete those resources from Terraform code to stop its management with it
+	- Carry out a terraform import of the resource and remove the code that is trying to recreate them
+
+22. Name all version controls supported by Terraform
+	The supported version controls are:
+	- Azure DevOps Services
+	- Azure DevOps Server
+	- Bitbucket Server
+	- Bitbucket Cloud
+	- Gitlab EE and CE
+	- Gitlab.com
+	- GitHub Enterprise
+	- GitHub.com (OAuth)
+	- GitHub.com
+
+23. What are some of the built-in provisioners available in Terraform?
+	Here is the list of built-in provisioners in Terraform:
+	- Salt-masterless Provisioner
+	- Remote-exec Provisioner
+	- Puppet Provisioner
+	- Local-exec Provisioner
+	- Habitat Provisioner
+	- File Provisioner
+	- Chef Provisioner
+
+25. Tell us about some notable Terraform applications.
+	The applications of Terraform are pretty broad due to its facility of extending its abilities for resource manipulation. 
+	Some of the unique applications are:
+
+	- Software demos development
+	- Resource schedulers
+	- Multi-cloud deployment
+	- Disposable environment creations
+	- Multi-tier applications development
+	- Self-service clusters
+	- Setup of Heroku App
+
+26. What are the components of Terraform architecture?
+	The Terraform architecture includes the following features:
+	- Sub-graphs
+	- Expression Evaluation
+	- Vertex Evaluation
+	- Graph Walk
+	- Graph Builder
+	- State Manager
+	- Configuration Loader
+	- CLI (Command Line interface)
+	- Backend
+
+27. Define Resource Graph in Terraform.
+	- A resource graph is a visual representation of the resources. It helps modify and create independent resources simultaneously. 
+	  Terraform establishes a plan for the configuration of the graph to generate plans and refresh the state. 
+	  It creates structure most efficiently and effectively to help us understand the drawbacks.
+
+28. Can you provide a few examples where we can use for Sentinel policies?
+	Sentinels are a powerful way to implement a variety of policies in Terraform.
+	Here are a few examples:
+	- Enforce explicit ownership in resources
+	- Restrict roles the cloud provider can assume
+	- Review an audit trail for Terraform Cloud operations
+	- Forbid only certain resources, providers, or data sources
+	- Enforce mandatory tagging on resources 
+	- Restrict how modules are used in the Private Module Registry
+
+29. What are the various levels of Sentinel enforcement?
+	Sentinel has three enforcement levels - advisory, soft mandatory, and hard mandatory.
+
+	- Advisory - Logged but allowed to pass. An advisory is issued to the user when they trigger a plan that violates the policy.
+	- Soft Mandatory - The policy must pass unless an override is specified. Only administrators have the ability to override.
+	- Hard Mandatory - The policy must pass no matter what. This policy cannot be overridden unless it is removed. 
+	  It is the default enforcement level in Terraform.
+
+30. How to Store Sensitive Data in Terraform?
+	- Terraform requires credentials to communicate with your cloud provider's API. But most of the time, 
+	  these credentials are saved in plaintext on your desktop. GitHub is exposed to thousands of API and cryptographic keys every day. 
+	  Hence, your API keys should never be stored in Terraform code directly.  
+	  You should use encrypted storage to store all your passwords, TLS certificates, SSH keys, and anything else that shouldn't be stored in plain text.
+
+Advanced Terraform Interview Questions
+
+31. What is Terragrunt, and what are its uses?
+	-Terragrunt is a thin wrapper that provides extra tools to keep configurations DRY, 
+	 manage remote state and work with multiple Terraform modules. It is used for:
+
+	- Working with multiple AWS accounts
+	- Executing Terraform commands on multiple modules
+	- Keeping our CLI flags DRY
+	- Keeping our remote state configuration DRY
+	- Keeping our Terraform code DRY
+
+32. Explain State File Locking?
+	- State file locking is Terraform mechanism in which operations on a specific state file are blocked to 
+	 avoid conflicts between multiple users performing the same process. When one user releases the lock, 
+	 then only the other one can operate on that state. This helps in preventing state file corruption. This is a backend operation.
+
+33. What do you understand by a Tainted Resource?
+	- A tainted resource is a resource that is forced to be destroyed and recreated on the next apply command. 
+	  When a resource is marked as tainted, the state files are updated, but nothing changes on infrastructure. 
+	  The terraform plan out shows that help will get destroyed and recreated. The changes get implemented when the next apply happens.
+
+34. How to lock Terraform module versions?
+	- A proven way of locking Terraform module version is using the Terraform module registry as a source. 
+	  We can use the ‘version’ attribute in module of the Terraform configuration file. 
+	  As the Github repository is being used as a source, we need to specify versions, branch, and query string with ‘?ref’.
+
+35. What is Terraform Core? Tell us some primary responsibilities of it.
+	- Terraform Core is a binary written statically compiled by using the Go programming language. 
+	  The compiled binary offers an entry point for the users of Terraform. The primary responsibilities include:
+
+	- Reading and interpolation of modules and configuration files by Infrastructure as code functionalities
+	- Resource Graph Construction
+	- Plugin communication through RPC
+	- Plan execution
+	- Management of resource state
+
+36. Give the terraform configuration for creating a single EC2 instance on AWS.
+This is the Terraform configuration for creating a single EC2 instance on AWS:
+
+provider “aws” {
+
+region = “”}
+
+resource “aws_instance”
+
+“example” {
+
+ami = ""
+
+instance_type = ""
+
+tags {
+
+ Name = "example"}
+
+37. How will you upgrade plugins on Terraform?
+	- Run ‘terraform init’ with ‘-upgrade’ option. This command rechecks the releases.hashicorp.com to find new acceptable provider versions. 
+	  It also downloads available provider versions. “.terraform/plugins/<OS>_<ARCH>” is the automatic downloads directory.
+
+38. How will you make an object of one module available for the other module at a high level?
+	- Ab output variable is defined in resource configuration.
+	- Declare the output variable of module_A.
+	- Create a file variable.tf for module B.
+	- Establish the input variable inside this file having the same name as the key defined in module_B.
+	- Replicate the process for making variable available to other modules
+
+39. What are some of the latest Terraform Azure Provider factors?
+	- The latest versions involve new data resources and Azurem_batch_certificate, which helps in managing the certificate.
+	  This resource is used for controlling the prefix in networking. There is fixing of bugs, and azurerm_app_service has also been enhanced.
+
+40. How will you control and handle rollbacks when something goes wrong?
+	- I need to recommit the previous code version to be the new and current version in my VCS. 
+	  This would trigger as terraform run, which would be responsible for running the old code. 
+	  As Terraform is more declarative, I will make sure all things in the code roll back to the old code. 
+	  I would use the State Rollback Feature of Terraform Enterprise to roll back to the latest state if the state file got corrupted.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

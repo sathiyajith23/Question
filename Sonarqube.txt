@@ -1,0 +1,207 @@
+1. Explain what SonarQube is.
+	SonarQube, developed by SonarSource is an open-source framework for constant review 
+	of code quality to perform automated reviews of 20 + programming languages with 
+	static code analysis to identify bugs, security vulnerabilities, and code bad smells. 
+
+2. Why do you think that we should use SonarQube?
+	SonarQube improves productivity by enabling development teams to identify and muzzle 
+	redundancy and duplication of code. SonarQube makes it easier for team members to 
+	decrease application size, code complexity, time and cost of maintenance, and make 
+	code easier to read and understand.
+
+3. Explain why does SonarQube need a database
+	SonarQube needs to communicate with the database to save the results of the analysis. 
+	The SonarQube Runner needs to interact with both the web server and the database 
+	and is suggested as the default launcher to analyze a project with SonarQube. 
+	This means all the passwords should be stored in the database.
+
+4. Explain the advantages of using SonarQube.
+	SonarQube is open source
+	SonarQube supports various languages such as C# and Java.
+	SonarQube reports duplicate code, code coverage, unit testing, code complexity historical, and so on.
+	We can integrate SonarQube with build tools, such as Gradle and ant.
+	SonarQube has an Eclipse plugin such as Sonarlint.
+	SonarQube supports external plugins such as plugin for ldap.
+
+5. How can you create reports in SonarQube?
+	Use the following command to create reports in SonarQube:
+	- mvn clean install
+	- mvn sonar:sonar -Dsonar.issuesreport.html.enable=true
+
+6. Why do you think that we should use SonarQube over other Code Quality Tools?
+	There are various reasons to use SonarQube and not other code quality solutions. 
+	This includes but is not restricted to:
+
+	- No need for an IDE – any language supported.
+	- Supports dynamic languages such as Python, JavaScript, and Ruby.
+
+7. Explain the difference between SonarLint and SonarQube?
+
+SonarQube:
+	SonarQube is the main server that performs complete analysis 
+	(activated by the different SonarQube scanners).The analysis 
+	is to provide your code base a 360 Â° view of the quality. 
+	To this end, it periodically analyzes each source line of your project.
+
+SonarLint:
+	SonarLint is available only in the IDE (IntelliJ, Visual Studio and Eclipse).
+	Its objective is to offer immediate feedback as you enter your code.
+	It concentrates on what code you specify or modify for this function.
+	SonarLint is an agent that enables us to connect with SonarQube and executes the analysis remotely.
+	- Both SonarQube and SonarLint are dependent on the same analyzers for static source code, 
+	  most of which is written using SonarSource technology.
+
+8. Is SonarQube Replacement for Checkstyle, PMD, FindBugs?
+	By default, for Java projects, Sonar executes FindBugs, 
+	CheckStyle, and PMD, as well as a few other "plugins", such as Cobertura. 
+	The main advantage is that it stores the history in a database. 
+	Sonar uses these three tools as plugins and the data 
+	from all three of these tools is applied with a value that displays graphs.
+
+9. What is the difference between Sonar Runner and Sonar Scanner?
+	“Runner” is the old name for "Scanner". All you need to know about the 
+	different SonarQube Scanners is present in the Scanners section of the 
+	official documentation. You can use the following option, if you are stuck on Java 7:
+
+	- SonarQube Runner (sonar-runner) up to version 5.5 of SonarQube.
+	- SonarQube Scanner (sonar-scanner) 2.6.1.
+
+10. Explain SonarQube quality profile
+	Quality Profiles are the primary component of SonarQube, as they are where the set of rules that, 
+	when violated, raise issues on the codebase (example: methods should not have a 
+	Cognitive Complexity higher than 15). Quality Profiles are described for each language.
+	Ideally, all projects are measured with the same profile for any given language,
+	but that is not always practical. For example, you may find that the technological 
+	implementation varies from one application to another (for example,
+	different coding rules may be applicable when building threaded or non-threaded Java applications).
+	You should ensure stronger requirements on some of the applications (for example internal frameworks).
+
+11. Explain, what are the prerequisite for SonarQube Installation
+	Following are the prerequisites for SonarQube Installation
+
+	- DOTNET
+	- Php
+	- Java
+	- JavaScript
+	
+12. Which of the following statements is correct?
+	Sonar executes FindIssue by default for Java projects.
+	Sonar executes CheckStyle, FindBugs, and PMD by default for Java projects.
+	Sonar executes Checkmate by default for Java projects.
+	Sonar executes PMDtest by default for Java projects.
+	
+	- Correct Answer: The correct statement is Sonar executes CheckStyle, FindBugs and PMD by default for Java projects.
+
+13. Explain the term RULES with respect to SonarQube?
+	SonarQube runs rules on source code to create issues. There are four types of rules:
+
+	- For Bugs and code smells, zero false-positives are anticipated. This is the 
+	  target so that developers do not have to wonder if a fix is required.
+
+	- For Vulnerabilities, the aim is to have more than 80% of issues be true-positives.
+	
+	- Security Hotspot rules focus on attention to code that is security-sensitive.
+	  It is predicted that more than 80% of the issues will be easily resolved as 
+	  “Reviewed” after review by a developer.
+
+14. How do I get started with SonarQube?
+	One can use SonarQube from their local machine. All you need to do is install 
+	Java JDK 8u40 or later, Apache Maven 3.0.4 or later, and Maven 3.0 or later.
+
+15. Can you execute SonarQube on your own server?
+	Yes, one can host SonarQube on their own server. However, it is suggested to use a hosted version of SonarQube.
+
+16. How would you know if the SonarQube instance is running correctly?
+	If the SonarQube instance executes correctly, then one should have absolutely no problems at all.
+	However, if one has issues with the instance, it is recommended that you check the following: 
+
+	- Can you login to the SonarQube web interface?
+	- If not, then what error message is being displayed?
+	- Is the database accessible from other machines? (Check that you can access it via MySQL Workbench)
+	- Can you establish a link to your SonarQubes using the SonarQube CLI client?
+
+17. List the components in SonarQube architecture
+	The components of the SonarQube architecture are:
+	- Sonar Analyzer
+	- SonarQube Database
+	- Source Code
+	- Sonar Scanner
+
+18. What are sonarqube quality gates?
+	Quality Gates are the perfect way to guarantee standards are met and governed across 
+	all the organization's projects. Quality Gates are a group of threshold measures set 
+	on your project such as Technical Debt Measure, Code Coverage, Number of Blocker 
+	/ Critical Issues, Security Rating / Unit Test Pass Rate and so on. Quality Gates are 
+	described and managed in the Quality Gates page found in the top menu.
+
+19. Explain the use of the SonarQube database.
+	SonarQube is a tool that checks the quality of code. Thus, the database of SonarQube 
+	could be any relational database such as MySQL, Oracle and so on. This database is used 
+	to store the results of the analysis that can be viewed with the tool's User Interface.
+
+20. How is the architecture of the SonarQube?
+	The main engine of the SonarQube platform is known as Squid. This engine is supported 
+	by extra code analyzers that SonarQube organizes together to measure the quality of the code. 
+	SonarQube architecture, comprises mainly four components:
+
+	- Source Code
+	- Sonar Scanner
+	- Sonar Analyzer
+	- SonarQube Database
+
+21. Explain how I can delete a project from SonarQube?
+	Following are the steps to delete a project from SonarQube:
+
+	- Login to the system as an administrator.
+	- Select to Administration -> Projects -> Projects Management.
+	- Select the Project(s) you would like to Delete.
+	- Select the Delete option available at the top right corner.
+
+22. Another one of the popular SonarQube interview questions is “What languages does SonarQube support?”
+	SonarQube includes support for the programming languages such as Java (including Android),
+	C/C++, C#, TypeScript, JavaScript, Go, Swift, Python, COBOL, Apex, PHP, Ruby, Kotlin, HTML, 
+	CSS, ABAP, Scala, Objective-C, PL/I, PL/SQL, Flex, RPG, T-SQL, VB.NET, VB6, and XML. 
+
+23. Explain if SonarQube is a replacement for Checkstyle, PMD, and FindBugs ?
+	Sonar executes CheckStyle, FindBugs, and PMD, as well as a few other "plugins",
+	such as Cobertura on default for Java projects. The main advantage is that it 
+	stores the history in a database. Sonar uses these three tools as plugins and 
+	collates the data from all three by giving additional value by displaying graphs 
+	and such from these tools. Thus, they are complementary to sonar.
+
+24. Explain the steps to trigger a full ElasticSearch reindex in SonarQube?
+	Following are the steps to force a reindex:
+
+	- Stop the server
+	- Delete the contents of the $SQ_HOME/data/es7 directory
+	- Start the server
+	However, ensure that you are aware of the processes in place on the SonarQube 
+	and also that a full re-index can be quite lengthy depending on the size of your instance?
+
+25. When a resolved issue does not get corrected, what is the status it gets into automatically?
+	
+	- When a resolved issue does not get corrected, the status automatically gets set to “reopened”.
+
+26. Explain what security covers for SonarQube
+	
+	- Security in SonarQube manages the access rights to components, pieces of 
+	  information and enables customization for users.
+
+27. Explain what does the header section comprise in SonarQube:
+	
+	- The header section comprises lines, issues, coverage and duplications
+	
+28. Which property should be declared for SonarQube Project base dir?
+	
+	- The property to be declared for SonarQube Project base dir is sonar.projectBaseDir.
+
+29. Which property should be declared to tell SonarQube which SCM plugin should be used to grab SCM data on the project.
+
+	- The property to be declared to tell SonarQube which SCM plugin should be used to grab SCM 
+	  data on the project is sonar.scm.provider.
+
+30. Explain the term code smell with respect to SonarQube
+	- Code smell is a maintainability-related issue in the code. Leaving it as-is means that at 
+	  best maintainers are bound to have a tougher time than they should while making changes to the code. 
+	  At worst, they can get so confused by the state of the code that they may end up introducing additional 
+	  errors as they make modifications.

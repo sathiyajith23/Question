@@ -1,0 +1,72 @@
+GIT CLONE : git clone <https://name-of-the-repository-link>
+
+	Git clone basically makes an identical copy of the of a project in a remote repository 
+	and saves it to your computer(local machine).
+-------------------------------------------------------------------------------------------
+GIT PULL : git pull <remote>
+
+	The git pull command is used to get updates from the remote repo. 
+	This command is a combination of git fetch and git merge which means that, 
+	when we use git pull, it gets the updates from remote repository (git fetch) 
+	and immediately applies the latest changes in your local (git merge).
+--------------------------------------------------------------------------------------------
+GIT FETCH : git fetch <remote>
+
+	The git fetch command downloads objects to the local machine without overwriting 
+	existing local code in the current branch.
+--------------------------------------------------------------------------------------------
+GIT BRANCH : git branch or git branch --list
+
+	The git branch command is used to see the available branch in local machine or local repo.
+	
+	Creating a new branch    : git branch <branch-name>
+	Viewing branches         : git branch or git branch --list
+	Deleting a branch        : git branch -d <branch-name>
+	create & navigate branch : git checkout -b <branch-name>
+-----------------------------------------------------------------------------------------------
+GIT ADD : git add <file> 
+
+	The git add command adds a file or folder to the staging area.
+	
+	To add a single file 		: git add <file>
+	To add everything at once	: git add -A (or) git add .
+------------------------------------------------------------------------------------------------
+GIT COMMIT : git commit -m 'message'
+
+	The git commit command will save all staged changes to the local repository.
+	Along with a brief description from the user.
+-------------------------------------------------------------------------------------------------
+GIT PUSH : git push <remote url> <branch-name>
+
+	The git push command is used to upload local repository content to a remote repository.
+	Note : Git push only uploads changes that are committed.
+	
+	if you newly created branch ,need to update the remote repo by using below command
+	git push --set-upstream <remote> <name-of-your-branch> or git push -u origin <branch_name>
+--------------------------------------------------------------------------------------------------
+GIT REVERT : git revert <commit id>
+
+	git revert is used to record some new commits to reverse the effect of some earlier commits.
+--------------------------------------------------------------------------------------------------------
+GIT RESET : git resert --hard <commit id> or git resert <commi id>
+
+	git reset is a powerful command that is used to undo local changes. head will move to specified commit
+	
+	--soft: uncommit changes, changes are left staged (index).
+	--mixed (default): uncommit + unstage changes, changes are left in working tree.
+	--hard: uncommit + unstage + delete changes, nothing left
+-----------------------------------------------------------------------------------------------------------
+GIT MERGE : git merge <branch-name>
+
+	git merge command is used to merge one branch to another branch.
+-------------------------------------------------------------------------------------------------------------
+Different between git pull and git fetch 
+	The git fetch command downloads objects to the local machine without overwriting existing local code 
+	in the current branch. The command pulls a record of remote repository changes, allowing insight 
+	into progress history before adjustments.
+--------------------------------------------------------------------------------------------------------------
+
+
+
+	
+	
